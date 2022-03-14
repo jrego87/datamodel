@@ -1,24 +1,4 @@
-# datamodel
-Data model explanation and naming convention
-
-
-# Returnly Analyst Challenge
- 
-## Goal
-The goal of this assignment is to demonstrate your skills and also engage with Returnly data scientists and analysts. We want to see how you approach and solve a data analysis problem.
- 
-## Process
-This is an open-ended problem, there's no right or wrong answer. We're interested to learn about your process, the tools that you use, the metrics that you look at, how you frame the problem, structure the code and present the insights. 
-
-Feel free to make any assumptions, and if you have any questions do not hesitate to email us for clarity. Most importantly, please read all instructions before beginning.
- 
-Do not modify this file (`README.md`). If you would like to provide any supporting documentation, please do so in separate file(s).
-
-Please write all code and add all deliverables on a branch. You can name the branch anything you want. When you are ready for Returnly staff to review the assignment, please open a Pull Request on GitHub.
-
-Once the Pull Request has been opened, Returnly staff may ask questions about your code and deliverables. These questions are meant to start a discussion.
- 
-## Project Specifics
+# Datamodel
  
 ### Context
 Returnly has two main product offerings:
@@ -26,19 +6,6 @@ Returnly has two main product offerings:
 2. FinTech: we offer our merchants's shoppers an innovative new FinTech product called Instant Refunds™. Instead of waiting weeks for an order refund, eligible customers get returns credited instantly. All the details about our FinTech products can be found on our [website](https://returnly.com/credit/).
 
 One of Returnly's merchants that uses both the SaaS and Instant Refunds™ products is soon due to renew their annual contract. Unfortunately, the merchant is not very data savvy and therefore does not understand the value Returnly adds to its business and the likelihood that the merchant will churn is high. You are part of a task force consisting of members from Sales, Customer Success and the Executive team trying to prevent the merchant from churning.
-
-### Task
-Your task is to conduct an analysis identifying hard facts and insights about how Returnly drives value for that specific merchant. Your analysis should result in a presentation for the task force. All task force members from Sales, Customer Success and the Executive team should be in a position to highlight Returnly's ROI in negotiations with the merchant after having attended your presentation.
-
-### Data
-You are given a dataset that consists of an extract from our analytical database (Snowflake). All tables from our production databases that store all transactions and their details in third normal form are regularly synchronized with Snowflake.
-The compressed and encrypted 7zip file [20190912.snowflake.csv.7z](20190912.snowflake.csv.7z) in this repository contains a subset of 11 tables that are relevant for this assignment in CSV format. The data covers transactions over a period of twelve months, starting 1 July 2018, for the merchant in scope.
-
-You will receive the password and the command to decrypt and extract the data separately via email.
-
-Some columns containing financial information are sanitized with a [min-max transformation](https://en.wikipedia.org/wiki/Feature_scaling#Rescaling_(min-max_normalization)). This results in all values being scaled between 0 and 1. If you rather prefer to work with values that look more similar to actual financial figures, you can revert the min-max transformation by setting global `min` and `max` values of your choice and then applying the following formula: `x * (max - min) + min`.
-
-**Please treat this dataset and content of this assignment with utmost confidentiality.**
 
 ### Data dictionary and naming conventions
 
@@ -240,16 +207,3 @@ Column | Description
 `is_disabled` | True if voucher has been disabled
 `created_at` | 
 `updated_at` | 
-
-
-### Constraints
-You are not constrained in your choice of tools, software or programming language for this assignment. We would like to set you up for success and not limit you in tackling this problem in your familiar environment. In order to streamline the review process, we just ask you to:
-- provide all files, copy/paste SQL queries and make screenshots of filters, aggregations and other settings if you decide to work with a desktop BI application such as Tableau Desktop, Microsoft Power BI etc.
-- deliver your presentation slides in a standard format, such as PDF, as not every organization is using Microsoft PowerPoint
-
-Do not treat this as an academic exercise. Please state your assumptions when you make any, and write any code, queries etc. as if you were collaborating with other teammates who will need to understand these. Please aim for quality instead of turnaround time. Good luck!
-
-### Rules
-- Do all work on a feature branch (do not commit directly to master)
-- Feel free to use Google, StackOverflow, etc.
-- When done, open a PR from your branch to master. Returnly staff will then review your deliverables and ask you follow-up questions.  Please be prepared to talk about your thought process and decision making in the context of the PR comments.
